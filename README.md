@@ -1,3 +1,11 @@
+# This is a fork, please see the original project
+Please note that this is a fork of https://github.com/heatherleaf/crossword-maker
+The purpose is only to make a hack implementation of touch support if I get the time.
+All credits go to https://github.com/heatherleaf for creating this tool.
+
+The rest of the information below is from the fork source
+
+
 # Crossword maker
 
 A simple web-based tool for building your own crosswords.
