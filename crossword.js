@@ -54,6 +54,7 @@ function initialize() {
     dom.buttons.upload.addEventListener('change', upload_dictionary);
     dom.buttons.reset.addEventListener('click', clear_crossword);
     document.addEventListener('mouseup', on_mouse_up);
+    document.addEventListener('touchend', on_mouse_up);  // Touch
     for (let btn of dom.buttons.resize) {
         btn.addEventListener('click', resize_crossword.bind(btn));
     }
@@ -359,7 +360,9 @@ function insert_crossword_cell(x, y) {
     let cell = row.insertCell(x).appendChild(document.createElement('div'));
     clear_cell(cell);
     cell.addEventListener('mousedown', on_mouse_down);
+    cell.addEventListener('touchstart', on_mouse_down); // Touch
     cell.addEventListener('mouseenter', on_mouse_enter);
+    cell.addEventListener('touchmove', on_mouse_enter); // Touch
     cell.addEventListener('dblclick', on_dbl_click);
     cell.addEventListener('click', on_click);
 }
